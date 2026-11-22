@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="apiBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#04090d"/>
+      <stop offset="100%" stop-color="#000000"/>
+    </linearGradient>
+    <linearGradient id="nodeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#CFEAE0"/>
+      <stop offset="100%" stop-color="#5B91A3"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#apiBg)"/>
+
+  <!-- Outer Terminal Window -->
+  <rect x="40" y="40" width="720" height="420" rx="14" fill="#070e13" stroke="rgba(91, 145, 163, 0.4)" stroke-width="1.5"/>
+  
+  <!-- Terminal Top Bar -->
+  <rect x="40" y="40" width="720" height="42" rx="14" fill="#0b161c"/>
+  <rect x="40" y="66" width="720" height="16" fill="#0b161c"/>
+  
+  <circle cx="65" cy="61" r="6" fill="#ff5f56"/>
+  <circle cx="85" cy="61" r="6" fill="#ffbd2e"/>
+  <circle cx="105" cy="61" r="6" fill="#27c93f"/>
+
+  <text x="400" y="66" fill="#CFEAE0" font-family="'Courier New', monospace" font-size="13" font-weight="bold" text-anchor="middle">
+    bash ~ /api/v1/endpoints [RESTful Architecture]
+  </text>
+
+  <!-- Left Code / JSON Output Window -->
+  <rect x="65" y="105" width="370" height="330" rx="10" fill="#03070a" stroke="rgba(91, 145, 163, 0.25)" stroke-width="1"/>
+  
+  <text x="85" y="135" fill="#5B91A3" font-family="'Courier New', monospace" font-size="12">// HTTP 200 OK — Auth &amp; Token Dispatch</text>
+  <text x="85" y="160" fill="#CFEAE0" font-family="'Courier New', monospace" font-size="12">{</text>
+  <text x="105" y="185" fill="#CFEAE0" font-family="'Courier New', monospace" font-size="12">"status": <tspan fill="#5B91A3">"success"</tspan>,</text>
+  <text x="105" y="210" fill="#CFEAE0" font-family="'Courier New', monospace" font-size="12">"statusCode": <tspan fill="#CFEAE0">200</tspan>,</text>
+  <text x="105" y="235" fill="#CFEAE0" font-family="'Courier New', monospace" font-size="12">"user": {</text>
+  <text x="125" y="260" fill="#5B91A3" font-family="'Courier New', monospace" font-size="12">"id": "usr_99a81",</text>
+  <text x="125" y="285" fill="#5B91A3" font-family="'Courier New', monospace" font-size="12">"role": "admin",</text>
+  <text x="125" y="310" fill="#5B91A3" font-family="'Courier New', monospace" font-size="12">"permissions": ["read", "write", "exec"]</text>
+  <text x="105" y="335" fill="#CFEAE0" font-family="'Courier New', monospace" font-size="12">},</text>
+  <text x="105" y="360" fill="#CFEAE0" font-family="'Courier New', monospace" font-size="12">"token": <tspan fill="#5B91A3">"Bearer eyJhbGciOiJIUzI1..."</tspan>,</text>
+  <text x="105" y="385" fill="#CFEAE0" font-family="'Courier New', monospace" font-size="12">"latency": <tspan fill="#CFEAE0">"18ms"</tspan></text>
+  <text x="85" y="410" fill="#CFEAE0" font-family="'Courier New', monospace" font-size="12">}</text>
+
+  <!-- Right Architecture Diagram -->
+  <rect x="460" y="105" width="275" height="330" rx="10" fill="#050c10" stroke="rgba(91, 145, 163, 0.25)" stroke-width="1"/>
+  <text x="597" y="135" fill="#CFEAE0" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">API MICROSERVICE PIPELINE</text>
+
+  <!-- Architecture Boxes -->
+  <!-- Client -->
+  <rect x="495" y="160" width="205" height="40" rx="8" fill="#0d1b22" stroke="#5B91A3" stroke-width="1.2"/>
+  <text x="597" y="185" fill="#CFEAE0" font-family="sans-serif" font-size="11" text-anchor="middle">Client App / Postman</text>
+
+  <!-- Arrow -->
+  <line x1="597" y1="200" x2="597" y2="225" stroke="#CFEAE0" stroke-width="2" stroke-dasharray="4 2"/>
+
+  <!-- Middleware -->
+  <rect x="495" y="225" width="205" height="45" rx="8" fill="#13242e" stroke="#CFEAE0" stroke-width="1.5"/>
+  <text x="597" y="247" fill="#CFEAE0" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">Auth Middleware &amp; Rate Limiter</text>
+  <text x="597" y="262" fill="#5B91A3" font-family="sans-serif" font-size="10" text-anchor="middle">JWT Verification • Helmet Security</text>
+
+  <!-- Arrow -->
+  <line x1="597" y1="270" x2="597" y2="295" stroke="#CFEAE0" stroke-width="2" stroke-dasharray="4 2"/>
+
+  <!-- Controllers & Services -->
+  <rect x="495" y="295" width="205" height="45" rx="8" fill="#0d1b22" stroke="#5B91A3" stroke-width="1.2"/>
+  <text x="597" y="318" fill="#CFEAE0" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">MVC Controller &amp; Services</text>
+  <text x="597" y="333" fill="#5B91A3" font-family="sans-serif" font-size="10" text-anchor="middle">Business Logic &amp; Validation</text>
+
+  <!-- Arrow -->
+  <line x1="597" y1="340" x2="597" y2="365" stroke="#CFEAE0" stroke-width="2" stroke-dasharray="4 2"/>
+
+  <!-- Database -->
+  <rect x="495" y="365" width="205" height="45" rx="8" fill="#081014" stroke="#CFEAE0" stroke-width="1.5"/>
+  <text x="597" y="388" fill="#CFEAE0" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">PostgreSQL / MongoDB</text>
+  <text x="597" y="403" fill="#5B91A3" font-family="sans-serif" font-size="10" text-anchor="middle">Optimized Query Engine</text>
+</svg>

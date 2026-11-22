@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="algoBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#03080c"/>
+      <stop offset="100%" stop-color="#000000"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#algoBg)"/>
+
+  <!-- App Window -->
+  <rect x="40" y="40" width="720" height="420" rx="16" fill="#071015" stroke="rgba(91, 145, 163, 0.4)" stroke-width="1.5"/>
+  
+  <!-- Header -->
+  <rect x="40" y="40" width="720" height="46" rx="16" fill="#0b171f"/>
+  <rect x="40" y="70" width="720" height="16" fill="#0b171f"/>
+  
+  <circle cx="65" cy="62" r="6" fill="#ff5f56"/>
+  <circle cx="85" cy="62" r="6" fill="#ffbd2e"/>
+  <circle cx="105" cy="62" r="6" fill="#27c93f"/>
+
+  <text x="400" y="67" fill="#CFEAE0" font-family="'Courier New', monospace" font-size="13" font-weight="bold" text-anchor="middle">
+    ALGORITHMS &amp; DATA STRUCTURES VISUALIZER
+  </text>
+
+  <!-- Left Graph / Node Traversal Canvas -->
+  <rect x="65" y="105" width="420" height="330" rx="10" fill="#020609" stroke="rgba(91, 145, 163, 0.25)" stroke-width="1"/>
+
+  <!-- Graph Edges -->
+  <line x1="130" y1="200" x2="230" y2="150" stroke="#5B91A3" stroke-width="2"/>
+  <line x1="130" y1="200" x2="230" y2="280" stroke="#CFEAE0" stroke-width="3"/>
+  <line x1="230" y1="150" x2="350" y2="170" stroke="#5B91A3" stroke-width="2"/>
+  <line x1="230" y1="280" x2="350" y2="250" stroke="#CFEAE0" stroke-width="3"/>
+  <line x1="350" y1="170" x2="430" y2="220" stroke="#5B91A3" stroke-width="2"/>
+  <line x1="350" y1="250" x2="430" y2="220" stroke="#CFEAE0" stroke-width="3"/>
+
+  <!-- Graph Nodes -->
+  <circle cx="130" cy="200" r="22" fill="#122530" stroke="#CFEAE0" stroke-width="2.5"/>
+  <text x="130" y="206" fill="#CFEAE0" font-family="'Courier New', monospace" font-size="14" font-weight="bold" text-anchor="middle">S</text>
+
+  <circle cx="230" cy="150" r="18" fill="#0d1b22" stroke="#5B91A3" stroke-width="2"/>
+  <text x="230" y="155" fill="#5B91A3" font-family="'Courier New', monospace" font-size="12" text-anchor="middle">A</text>
+
+  <circle cx="230" cy="280" r="22" fill="#133644" stroke="#CFEAE0" stroke-width="2.5"/>
+  <text x="230" y="286" fill="#CFEAE0" font-family="'Courier New', monospace" font-size="14" font-weight="bold" text-anchor="middle">B</text>
+
+  <circle cx="350" cy="170" r="18" fill="#0d1b22" stroke="#5B91A3" stroke-width="2"/>
+  <text x="350" y="175" fill="#5B91A3" font-family="'Courier New', monospace" font-size="12" text-anchor="middle">C</text>
+
+  <circle cx="350" cy="250" r="22" fill="#133644" stroke="#CFEAE0" stroke-width="2.5"/>
+  <text x="350" y="256" fill="#CFEAE0" font-family="'Courier New', monospace" font-size="14" font-weight="bold" text-anchor="middle">D</text>
+
+  <circle cx="430" cy="220" r="24" fill="#CFEAE0" stroke="#5B91A3" stroke-width="3"/>
+  <text x="430" y="227" fill="#000000" font-family="'Courier New', monospace" font-size="15" font-weight="bold" text-anchor="middle">T</text>
+
+  <!-- Right Complexity Panel -->
+  <rect x="505" y="105" width="230" height="330" rx="10" fill="#050c11" stroke="rgba(91, 145, 163, 0.25)" stroke-width="1"/>
+  <text x="525" y="135" fill="#CFEAE0" font-family="sans-serif" font-size="13" font-weight="bold">Dijkstra Execution</text>
+  
+  <rect x="520" y="155" width="200" height="38" rx="6" fill="#0c171e"/>
+  <text x="530" y="178" fill="#5B91A3" font-family="sans-serif" font-size="11">Time: <tspan fill="#CFEAE0" font-weight="bold">O((V + E) log V)</tspan></text>
+
+  <rect x="520" y="200" width="200" height="38" rx="6" fill="#0c171e"/>
+  <text x="530" y="223" fill="#5B91A3" font-family="sans-serif" font-size="11">Space: <tspan fill="#CFEAE0" font-weight="bold">O(V)</tspan></text>
+
+  <text x="525" y="270" fill="#CFEAE0" font-family="sans-serif" font-size="11" font-weight="bold">Traversal Log:</text>
+  <text x="525" y="295" fill="#5B91A3" font-family="'Courier New', monospace" font-size="10">> Visit Node S (dist 0)</text>
+  <text x="525" y="315" fill="#5B91A3" font-family="'Courier New', monospace" font-size="10">> Relax Edge S -> B (dist 4)</text>
+  <text x="525" y="335" fill="#5B91A3" font-family="'Courier New', monospace" font-size="10">> Relax Edge B -> D (dist 7)</text>
+  <text x="525" y="355" fill="#CFEAE0" font-family="'Courier New', monospace" font-size="10">> Target T reached (dist 11)</text>
+
+  <rect x="520" y="380" width="200" height="35" rx="6" fill="rgba(207, 234, 224, 0.15)" stroke="#CFEAE0" stroke-width="1"/>
+  <text x="620" y="402" fill="#CFEAE0" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">Shortest Path Found</text>
+</svg>

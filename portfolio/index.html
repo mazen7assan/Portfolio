@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- ====================================================================
+       SEO & SOCIAL MEDIA METADATA
+       ==================================================================== -->
+  <!-- YOUR DATA: Edit the page title and description to fit your branding -->
+  <title>Mazen Hassan Rashed | Full Stack Developer</title>
+  <meta name="title" content="Mazen Hassan Rashed | Full Stack Developer">
+  <meta name="description" content="Portfolio of Mazen Hassan Rashed — Full Stack & Backend Developer. Computer Science student at Mansoura University specializing in Node.js, Express, databases, and scalable web architectures.">
+  <meta name="keywords" content="Mazen Hassan Rashed, Full Stack Developer, Backend Developer, Node.js, Express.js, MongoDB, PostgreSQL, JavaScript, Portfolio">
+  <meta name="author" content="Mazen Hassan Rashed">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mazenhassan.dev">
+  <meta property="og:title" content="Mazen Hassan Rashed | Full Stack Developer">
+  <meta property="og:description" content="Building scalable web applications and transforming ideas into functional, efficient, and user-friendly digital experiences.">
+  <meta property="og:image" content="assets/images/profile photo.jpeg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="Mazen Hassan Rashed | Full Stack Developer">
+  <meta property="twitter:description" content="Building scalable web applications and transforming ideas into functional, efficient, and user-friendly digital experiences.">
+  <meta property="twitter:image" content="assets/images/profile photo.jpeg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ====================================================================
+       INTERACTIVE BACKGROUND CANVAS & AMBIENT GLOW
+       ==================================================================== -->
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+  <div class="ambient-glow ambient-glow-1" aria-hidden="true"></div>
+  <div class="ambient-glow ambient-glow-2" aria-hidden="true"></div>
+  <div class="ambient-glow ambient-glow-3" aria-hidden="true"></div>
+
+  <!-- Custom Cursor Elements (Desktop only) -->
+  <div class="custom-cursor" aria-hidden="true"></div>
+  <div class="cursor-follower" aria-hidden="true"></div>
+
+  <!-- ====================================================================
+       NAVIGATION BAR
+       ==================================================================== -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <!-- Monogram Logo -->
+      <a href="#home" class="nav-logo" aria-label="Mazen Hassan Rashed Home">
+        <div class="logo-badge" id="nav-monogram">MR</div>
+        <div class="logo-name">
+          <span id="nav-full-name">Mazen Hassan</span>
+          <span class="logo-status">Portfolio</span>
+        </div>
+      </a>
+
+      <!-- Desktop & Mobile Navigation Links -->
+      <nav class="nav-menu" id="nav-menu" aria-label="Main Navigation">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#testimonials" class="nav-link">Testimonials</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#contact" class="nav-link">Contact</a>
+        <a href="#contact" class="nav-cta-btn">Hire Me</a>
+      </nav>
+
+      <!-- Mobile Hamburger Toggle Button -->
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ====================================================================
+       MAIN CONTENT CONTAINER
+       ==================================================================== -->
+  <main class="site-content">
+
+    <!-- ==================================================================
+         SECTION 1: HOME / HERO
+         ================================================================== -->
+    <section class="hero-section" id="home">
+      <div class="container hero-grid">
+        <!-- Hero Left Column: Identity & Bio -->
+        <div class="hero-content reveal">
+          <!-- Availability Pill -->
+          <div class="hero-status-pill">
+            <span class="status-dot"></span>
+            <span id="hero-availability">Available for Projects &amp; Internships</span>
+          </div>
+
+          <p class="hero-greeting">Hi, I'm</p>
+          
+          <!-- YOUR DATA: Mazen Hassan Rashed -->
+          <h1 class="hero-name" id="hero-name">Mazen Hassan Rashed</h1>
+
+          <!-- Animated Professional Title Typing Effect -->
+          <div class="hero-title-wrapper" aria-label="Professional Title">
+            <span class="typing-text" id="typing-text">Full Stack Developer</span>
+            <span class="typing-cursor" aria-hidden="true"></span>
+          </div>
+
+          <!-- Professional Bio -->
+          <p class="hero-bio" id="hero-bio">
+            Building scalable web applications and transforming ideas into functional, efficient, and user-friendly digital experiences.
+          </p>
+
+          <!-- Action Buttons -->
+          <div class="hero-actions">
+            <!-- 1. Hire Me -> Scrolls to Contact -->
+            <a href="#contact" class="btn btn-primary magnetic-btn">
+              <span>Hire Me</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+
+            <!-- 2. View My Projects -> Scrolls to Projects -->
+            <a href="#projects" class="btn btn-secondary magnetic-btn">
+              <span>View My Projects</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M6 9l6 6 6-6"/>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Social Media Links (Configurable via config.js) -->
+          <div class="hero-socials">
+            <span class="social-label">Connect:</span>
+            <div class="social-icons-group">
+              <!-- LinkedIn Icon -->
+              <a href="https://www.linkedin.com/in/mazen-hassan-rashed/" id="hero-linkedin-link" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="LinkedIn Profile">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                </svg>
+              </a>
+
+              <!-- GitHub Icon -->
+              <a href="https://github.com/mazen7assan" id="hero-github-link" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="GitHub Profile">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Right Column: Profile Image & Floating Accents -->
+        <div class="hero-visual reveal reveal-delay-1">
+          <div class="avatar-frame">
+            <div class="avatar-glow-ring" aria-hidden="true"></div>
+            
+            <div class="avatar-inner tilt-card">
+              <img src="assets/images/profile photo.jpeg" alt="Mazen Hassan Rashed — Full Stack Developer" class="avatar-img" id="hero-profile-img" onerror="this.src='assets/images/placeholder-profile.svg'">
+            </div>
+
+            <!-- Floating Tech Badges -->
+            <div class="floating-chip chip-top-left" aria-hidden="true">
+              <span class="chip-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/>
+                </svg>
+              </span>
+              <span>Full Stack / Node.js</span>
+            </div>
+
+            <div class="floating-chip chip-bottom-right" aria-hidden="true">
+              <span class="chip-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <ellipse cx="12" cy="5" rx="9" ry="3"/>
+                  <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/>
+                  <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
+                </svg>
+              </span>
+              <span>Backend &amp; Databases</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         SECTION 2: ABOUT ME
+         ================================================================== -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">About Me</span>
+          <h2 class="section-title">Architecting Digital <span class="text-gradient">Solutions</span></h2>
+          <p class="section-subtitle">Bridging theoretical computer science rigor with practical, production-ready engineering.</p>
+        </div>
+
+        <div class="about-grid">
+          <!-- Left Column: Profile Showcase Card -->
+          <div class="about-visual reveal">
+            <div class="about-card tilt-card">
+              <div class="about-photo-wrapper">
+                <img src="assets/images/profile photo.jpeg" alt="Mazen Hassan Rashed" class="about-photo" id="about-profile-img" onerror="this.src='assets/images/placeholder-profile.svg'">
+              </div>
+              <div class="about-card-badge">
+                <div class="badge-text-group">
+                  <span class="badge-label">Education</span>
+                  <span class="badge-val">Mansoura University</span>
+                </div>
+                <div class="badge-text-group" style="text-align: right;">
+                  <span class="badge-label">Major</span>
+                  <span class="badge-val">Computer Science</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Professional Narrative & Interests -->
+          <div class="about-content reveal reveal-delay-1">
+            <h3 class="about-headline">Computer Science Student &amp; Full Stack Software Developer</h3>
+            
+            <p class="about-bio-text" id="about-bio-p1">
+              I am a dedicated Computer Science student at Mansoura University with a strong passion for Full Stack Development and Backend Engineering. I focus on building reliable, scalable, and high-performance web applications that solve real-world problems.
+            </p>
+
+            <p class="about-bio-text" id="about-bio-p2">
+              My technical journey revolves around architecting robust RESTful APIs, designing optimized database schemas, and crafting intuitive, responsive user interfaces. I enjoy diving deep into problem-solving, clean code principles, and exploring modern cloud and web technologies.
+            </p>
+
+            <!-- Key Technical Interests -->
+            <div class="interest-title">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--color-mint);">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Areas of Technical Focus:</span>
+            </div>
+
+            <div class="interest-list" id="interest-list">
+              <!-- Rendered dynamically from config.js -->
+              <div class="interest-item">
+                <svg class="interest-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                <span>Building Scalable Applications</span>
+              </div>
+              <div class="interest-item">
+                <svg class="interest-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+                <span>Backend Development &amp; API Architecture</span>
+              </div>
+              <div class="interest-item">
+                <svg class="interest-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+                <span>Database Management &amp; Schema Optimization</span>
+              </div>
+              <div class="interest-item">
+                <svg class="interest-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+                <span>Algorithmic Problem-Solving</span>
+              </div>
+              <div class="interest-item">
+                <svg class="interest-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <span>Learning &amp; Adopting Modern Technologies</span>
+              </div>
+            </div>
+
+            <!-- Statistics Cards (Animated Counters) -->
+            <div class="stats-grid" id="stats-grid">
+              <!-- Stat Card 1 -->
+              <div class="stat-card tilt-card" data-target="1">
+                <div class="stat-number-wrapper">
+                  <span class="stat-number counter" id="stat-experience">1</span>
+                  <span class="stat-suffix">+</span>
+                </div>
+                <div class="stat-label">Years of Experience</div>
+                <div class="stat-desc">Dedicated learning &amp; dev</div>
+              </div>
+
+              <!-- Stat Card 2 -->
+              <div class="stat-card tilt-card" data-target="2">
+                <div class="stat-number-wrapper">
+                  <span class="stat-number counter" id="stat-projects">2</span>
+                  <span class="stat-suffix">+</span>
+                </div>
+                <div class="stat-label">Projects Completed</div>
+                <div class="stat-desc">Full stack &amp; backend builds</div>
+              </div>
+
+              <!-- Stat Card 3 -->
+              <div class="stat-card tilt-card" data-target="18">
+                <div class="stat-number-wrapper">
+                  <span class="stat-number counter" id="stat-technologies">18</span>
+                  <span class="stat-suffix">+</span>
+                </div>
+                <div class="stat-label">Technologies Mastered</div>
+                <div class="stat-desc">Languages, DBs &amp; frameworks</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         SECTION 3: EDUCATION
+         ================================================================== -->
+    <section class="section" id="education">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Education</span>
+          <h2 class="section-title">Academic <span class="text-gradient">Foundation</span></h2>
+          <p class="section-subtitle">Rigorous coursework in computational theory, systems engineering, and modern software design.</p>
+        </div>
+
+        <div class="timeline-wrapper" id="education-timeline">
+          <div class="timeline-line"></div>
+
+          <!-- Education Entry: Mansoura University -->
+          <div class="timeline-item reveal">
+            <div class="timeline-node">
+              <div class="timeline-node-inner"></div>
+            </div>
+
+            <div class="timeline-card tilt-card">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-institution">Mansoura University</h3>
+                  <div class="timeline-faculty">Faculty of Computers and Information</div>
+                </div>
+
+                <div class="timeline-badges">
+                  <span class="badge badge-mint">Computer Science</span>
+                  <span class="badge badge-blue">Third-Year Student</span>
+                  <span class="badge badge-mint" id="edu-grade">Grade: Very Good</span>
+                </div>
+              </div>
+
+              <div class="timeline-meta-row">
+                <span class="meta-item">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  <span id="edu-period">Start: 2024 — Expected Graduation: 2028</span>
+                </span>
+                <span class="meta-item">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  <span>Mansoura, Egypt</span>
+                </span>
+              </div>
+
+              <p class="timeline-desc">
+                Pursuing in-depth academic studies in core Computer Science fundamentals, including Data Structures &amp; Algorithms, Object-Oriented Analysis &amp; Design, Database Management Systems, Computer Networks, Operating Systems, and Software Engineering methodologies.
+              </p>
+
+              <div class="timeline-highlights-list">
+                <div class="timeline-highlight-item">
+                  <span class="highlight-bullet">▹</span>
+                  <span>Core focus on Data Structures, Algorithm Optimization, and Clean Architectural Patterns.</span>
+                </div>
+                <div class="timeline-highlight-item">
+                  <span class="highlight-bullet">▹</span>
+                  <span>Active participation in faculty technical workshops, team problem-solving challenges, and coding competitions.</span>
+                </div>
+                <div class="timeline-highlight-item">
+                  <span class="highlight-bullet">▹</span>
+                  <span>Hands-on academic projects spanning relational database design, distributed network protocols, and web apps.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         SECTION 4: EXPERIENCE
+         ================================================================== -->
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Experience &amp; Training</span>
+          <h2 class="section-title">Practical <span class="text-gradient">Experience</span></h2>
+          <p class="section-subtitle">Real-world projects, structured technical training programs, and community contributions.</p>
+        </div>
+
+        <div class="experience-wrapper">
+          <div class="experience-list" id="experience-list">
+            <!-- Experience entries rendered dynamically from js/config.js with fallback structure -->
+            <!-- 1. Professional / Freelance Experience -->
+            <div class="exp-card tilt-card reveal">
+              <div class="exp-top-bar">
+                <div>
+                  <h3 class="exp-role-title">Junior Full Stack Developer / Freelance</h3>
+                  <div class="exp-company">Independent Client Solutions / Remote / onsite</div>
+                </div>
+                <div class="timeline-badges">
+                  <span class="badge badge-mint">Professional Experience</span>
+                  <span class="exp-period">2023 – Present</span>
+                </div>
+              </div>
+              <p class="exp-desc">
+                Architected and delivered custom web applications and interactive client solutions. Integrated responsive frontends with secure Node.js/Express backends, optimized SQL and NoSQL database queries, and deployed web services.
+              </p>
+              <div class="exp-tech-stack">
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">Express.js</span>
+                <span class="tech-tag">MongoDB</span>
+                <span class="tech-tag">PostgreSQL</span>
+                <span class="tech-tag">HTML5/CSS3</span>
+              </div>
+            </div>
+
+            <!-- 2. Training Programs -->
+            <div class="exp-card tilt-card reveal reveal-delay-1">
+              <div class="exp-top-bar">
+                <div>
+                  <h3 class="exp-role-title">Full stack trainee</h3>
+                  <div class="exp-company">NTI Digital Egypt Youth Initiative.</div>
+                </div>
+                <div class="timeline-badges">
+                  <span class="badge badge-blue">Training Program</span>
+                  <span class="exp-period">Summer 2026</span>
+                </div>
+              </div>
+              <p class="exp-desc">
+                Completed intensive technical training on building enterprise-ready RESTful web services, applying MVC architecture, implementing JWT authentication, and managing relational and non-relational databases.
+              </p>
+              <div class="exp-tech-stack">
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">Express.js</span>
+                <span class="tech-tag">MongoDB</span>
+                <span class="tech-tag">REST APIs</span>
+                <span class="tech-tag">Postman</span>
+                <span class="tech-tag">Angular</span>
+                <span class="tech-tag">sql</span>
+                <span class="tech-tag">Git</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         SECTION 5: MY SKILLS (5 CATEGORIES)
+         ================================================================== -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Technical Competencies</span>
+          <h2 class="section-title">Skills &amp; <span class="text-gradient">Specializations</span></h2>
+          <p class="section-subtitle">A balanced toolkit spanning core CS paradigms, backend architectures, databases, and modern developer tooling.</p>
+        </div>
+
+        <!-- Skills Filter Tabs -->
+        <div class="skills-nav reveal" id="skills-filter-tabs">
+          <button class="skill-tab-btn active" data-category="all">All Skills</button>
+          <button class="skill-tab-btn" data-category="programming-concepts">Concepts</button>
+          <button class="skill-tab-btn" data-category="development-stack">Dev Stack</button>
+          <button class="skill-tab-btn" data-category="database-skills">Databases</button>
+          <button class="skill-tab-btn" data-category="software-engineering">Engineering</button>
+          <button class="skill-tab-btn" data-category="tools-workflow">Tools</button>
+        </div>
+
+        <!-- Skills Grid (Rendered from config.js) -->
+        <div class="skills-grid" id="skills-grid">
+          <!-- Categories are inserted dynamically by js/script.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         SECTION 6: PROJECTS
+         ================================================================== -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Featured Work</span>
+          <h2 class="section-title">Engineered <span class="text-gradient">Projects</span></h2>
+          <p class="section-subtitle">Showcasing end-to-end full stack applications, performant RESTful APIs, and algorithmic utilities.</p>
+        </div>
+
+        <!-- Project Category Filter -->
+        <div class="projects-filter-bar reveal">
+          <button class="filter-btn active" data-filter="all">All Projects</button>
+          <button class="filter-btn" data-filter="Full Stack">Full Stack</button>
+          <button class="filter-btn" data-filter="Backend & APIs">Backend &amp; APIs</button>
+          <button class="filter-btn" data-filter="Academic & Personal">Academic &amp; Algorithms</button>
+        </div>
+
+        <!-- Projects Responsive Grid -->
+        <div class="projects-grid" id="projects-grid">
+          <div class="project-card tilt-card reveal" data-category="Full Stack">
+            <div class="project-thumb-container">
+              <img src="assets/images/project-shop.png" alt="Shop Management System" class="project-img" loading="lazy" onerror="this.src='assets/images/project-ecommerce.svg'">
+              <span class="project-category-badge">Full Stack</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Shop Management System</h3>
+              <p class="project-desc">A bilingual (English/Arabic) e-commerce application with a customer storefront and a secured admin dashboard. Customers browse products, manage a cart and favorites, and check out with Cash on Delivery or Stripe, while admins manage categories, items, images, and the order lifecycle with automatic stock updates.</p>
+              
+              <div class="project-tags">
+                <span class="tech-tag">Angular</span>
+                <span class="tech-tag">TypeScript</span>
+                <span class="tech-tag">Tailwind CSS</span>
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">Express.js</span>
+                <span class="tech-tag">MongoDB</span>
+                <span class="tech-tag">JWT</span>
+                <span class="tech-tag">Stripe</span>
+                <span class="tech-tag">Jest</span>
+              </div>
+
+              <div class="project-actions">
+                <a href="https://github.com/mazen7assan/e-commerce-app" target="_blank" rel="noopener noreferrer" class="btn-card btn-card-primary" aria-label="GitHub Repository">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                  </svg>
+                  <span>GitHub Repo</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         SECTION 7: TESTIMONIALS / FEEDBACK
+         ================================================================== -->
+    <section class="section testimonials-section" id="testimonials">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Endorsements</span>
+          <h2 class="section-title">Client &amp; Peer <span class="text-gradient">Feedback</span></h2>
+          <p class="section-subtitle">Perspectives on collaboration, delivery speed, and technical craftsmanship.</p>
+        </div>
+
+        <!-- Testimonials Carousel Container -->
+        <div class="carousel-container reveal">
+          <div class="carousel-track-wrapper">
+            <div class="carousel-track" id="testimonial-track">
+              <div class="testimonial-slide">
+                <div class="testimonial-card tilt-card">
+                  <div class="quote-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+                  </div>
+                  <div class="star-rating" aria-label="5 out of 5 stars">
+                    <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  </div>
+                  <p class="testimonial-text">"Mazen displays a solid understanding of backend architecture and database modeling. His dedication to clean code standards and algorithmic efficiency makes him a strong asset on any engineering team."</p>
+                  <div class="testimonial-author">
+                    <div class="author-avatar">
+                      <img src="assets/images/avatar-1.svg" alt="Eng. Ahmed Tarek">
+                    </div>
+                    <div class="author-info">
+                      <span class="author-name">Eng. Ahmed Tarek</span>
+                      <span class="author-role">Senior Backend Engineer &bull; Tech Mentorship Program</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Controls: Prev, Dots, Next -->
+          <div class="carousel-controls">
+            <button class="carousel-nav-btn" id="carousel-prev-btn" aria-label="Previous testimonial">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
+            </button>
+
+            <div class="carousel-pagination" id="carousel-dots" aria-label="Testimonial pagination">
+              <!-- Pagination dots rendered dynamically -->
+            </div>
+
+            <button class="carousel-nav-btn" id="carousel-next-btn" aria-label="Next testimonial">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         SECTION 8: SERVICES
+         ================================================================== -->
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">What I Offer</span>
+          <h2 class="section-title">Specialized <span class="text-gradient">Services</span></h2>
+          <p class="section-subtitle">Delivering high-value engineering solutions tailored to your technical needs.</p>
+        </div>
+
+        <div class="services-grid" id="services-grid">
+          <!-- 4 Services Cards rendered dynamically from js/config.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         SECTION 9: GET IN TOUCH (CONTACT)
+         ================================================================== -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Let's Connect</span>
+          <h2 class="section-title">Get In <span class="text-gradient">Touch</span></h2>
+          <p class="section-subtitle">Have an opportunity, project idea, or technical question? Feel free to reach out directly.</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Left Column: Direct Contact Cards (WhatsApp & Gmail) -->
+          <div class="contact-info-cards reveal">
+            <!-- WhatsApp Direct Card -->
+            <div class="contact-card tilt-card">
+              <div class="contact-icon-box whatsapp-icon-box">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.043.072.043.419-.101.824zm-3.423-14.416c-6.627 0-12 5.373-12 12 0 2.164.577 4.195 1.584 5.952l-1.684 6.155 6.326-1.658c1.7 1.002 3.684 1.551 5.774 1.551 6.627 0 12-5.373 12-12s-5.373-12-12-12zm0 21.84c-1.892 0-3.662-.519-5.187-1.424l-.372-.222-3.856 1.011 1.029-3.758-.243-.388c-.994-1.586-1.571-3.454-1.571-5.459 0-5.424 4.412-9.84 9.84-9.84s9.84 4.416 9.84 9.84-4.416 9.84-9.84 9.84z"/>
+                </svg>
+              </div>
+              <div class="contact-card-content">
+                <span class="contact-card-title">Direct WhatsApp</span>
+                <span class="contact-card-val" id="contact-whatsapp-val">+20 155 241 9683</span>
+                <a href="https://wa.me/201552419683?text=Hello%20Mazen%2C%20I%20came%20across%20your%20developer%20portfolio%20and%20would%20like%20to%20connect%20with%20you!" id="contact-whatsapp-btn" target="_blank" rel="noopener noreferrer" class="btn-contact-action btn-whatsapp">
+                  <span>Message Me</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Gmail Direct Card -->
+            <div class="contact-card tilt-card">
+              <div class="contact-icon-box email-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
+              </div>
+              <div class="contact-card-content">
+                <span class="contact-card-title">Professional Email</span>
+                <span class="contact-card-val" id="contact-email-val">mazenhassanrashed@gmail.com</span>
+                <a href="mailto:mazenhassanrashed@gmail.com?subject=Inquiry%20via%20Developer%20Portfolio%20-%20Mazen%20Hassan%20Rashed" id="contact-email-btn" class="btn-contact-action btn-email">
+                  <span>Send Email</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Location & Availability info card -->
+            <div class="contact-card tilt-card">
+              <div class="contact-icon-box" style="background: rgba(207, 234, 224, 0.1); border: 1px solid var(--border-medium); color: var(--color-mint);">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+                </svg>
+              </div>
+              <div class="contact-card-content">
+                <span class="contact-card-title">Current Location</span>
+                <span class="contact-card-val" id="contact-location-val">Mansoura / Cairo, Egypt</span>
+                <span style="font-size: 0.8rem; color: var(--text-muted);">Open to remote worldwide &amp; on-site roles</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Interactive Contact Form -->
+          <div class="contact-form-container reveal reveal-delay-1">
+            <h3 class="form-heading">Send a Message</h3>
+            <p class="form-subheading">I will get back to you promptly within 24 hours.</p>
+
+            <form id="contact-form" class="contact-form" novalidate>
+              <!-- Name Field -->
+              <div class="form-group">
+                <label for="contact-name" class="form-label">
+                  <span>Your Full Name *</span>
+                  <span class="form-error-msg" id="name-error">Please enter your name</span>
+                </label>
+                <input type="text" id="contact-name" name="name" class="form-input" placeholder="e.g. Sarah Jenkins" required minlength="2">
+              </div>
+
+              <!-- Email Field -->
+              <div class="form-group">
+                <label for="contact-email-input" class="form-label">
+                  <span>Your Email Address *</span>
+                  <span class="form-error-msg" id="email-error">Please enter a valid email address</span>
+                </label>
+                <input type="email" id="contact-email-input" name="email" class="form-input" placeholder="e.g. sarah@example.com" required>
+              </div>
+
+              <!-- Subject Field -->
+              <div class="form-group">
+                <label for="contact-subject" class="form-label">
+                  <span>Subject *</span>
+                  <span class="form-error-msg" id="subject-error">Please provide a subject</span>
+                </label>
+                <input type="text" id="contact-subject" name="subject" class="form-input" placeholder="e.g. Full Stack Internship Opportunity" required minlength="3">
+              </div>
+
+              <!-- Message Field -->
+              <div class="form-group">
+                <label for="contact-message" class="form-label">
+                  <span>Message *</span>
+                  <span class="form-error-msg" id="message-error">Please write a message (at least 15 characters)</span>
+                </label>
+                <textarea id="contact-message" name="message" class="form-textarea" placeholder="Hello Mazen, I would like to discuss..." required minlength="15"></textarea>
+              </div>
+
+              <!-- Submit Button -->
+              <button type="submit" id="contact-submit-btn" class="btn-submit magnetic-btn">
+                <span id="submit-btn-text">Send Message</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ====================================================================
+       FOOTER
+       ==================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand / Identity -->
+        <div class="footer-brand">
+          <div class="nav-logo">
+            <div class="logo-badge">MR</div>
+            <div class="logo-name">
+              <span>Mazen Hassan Rashed</span>
+              <span class="logo-status">Full Stack Developer</span>
+            </div>
+          </div>
+          <p class="footer-bio">
+            Computer Science student passionate about building scalable web platforms, high-throughput backend APIs, and modern interactive digital experiences.
+          </p>
+        </div>
+
+        <!-- Quick Navigation Links -->
+        <div>
+          <h4 class="footer-title">Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="#home" class="footer-link">Home</a></li>
+            <li><a href="#about" class="footer-link">About Me</a></li>
+            <li><a href="#education" class="footer-link">Education</a></li>
+            <li><a href="#experience" class="footer-link">Experience</a></li>
+            <li><a href="#skills" class="footer-link">Skills</a></li>
+            <li><a href="#projects" class="footer-link">Projects</a></li>
+            <li><a href="#services" class="footer-link">Services</a></li>
+            <li><a href="#contact" class="footer-link">Get In Touch</a></li>
+          </ul>
+        </div>
+
+        <!-- Social Media & Connect -->
+        <div>
+          <h4 class="footer-title">Connect</h4>
+          <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 16px;">
+            Let's build something remarkable together.
+          </p>
+          <div class="footer-socials">
+            <a href="https://www.linkedin.com/in/mazen-hassan-rashed/" id="footer-linkedin-link" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+            <a href="https://github.com/mazen7assan" id="footer-github-link" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="GitHub">
+              <svg viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Copyright Notice & Dynamic Year -->
+      <div class="footer-bottom">
+        <div>
+          &copy; <span id="current-year">2026</span> Mazen Hassan Rashed. All rights reserved.
+        </div>
+        <div style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted);">
+          Crafted with HTML5 &bull; CSS3 &bull; Vanilla JavaScript
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- Interactive Feedback Toast Notification -->
+  <div class="toast-notification" id="toast-notification" role="alert" aria-live="polite">
+    <svg class="toast-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+      <polyline points="22 4 12 14.01 9 11.01"></polyline>
+    </svg>
+    <div id="toast-message">Message sent successfully! Thank you for reaching out.</div>
+  </div>
+
+  <!-- ====================================================================
+       SCRIPTS: CONFIGURATION & ENGINE
+       ==================================================================== -->
+  <!-- 1. Central configuration file containing all personal data -->
+  <script src="js/config.js"></script>
+
+  <!-- 2. Main interactive application logic -->
+  <script src="js/script.js"></script>
+</body>
+</html>
